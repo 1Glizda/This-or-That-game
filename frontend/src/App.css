@@ -1,0 +1,52 @@
+/* App.css */
+
+/* Set body to cover the whole viewport */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background styles */
+.app-background {
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+}
+
+/* Side menu styles */
+.side-menu {
+  width: 250px; /* Default width of the menu */
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: width 0.3s;
+  position: relative;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Retractable menu styles */
+.side-menu.retracted {
+  width: 70px; /* Width when retracted */
+}
+
+/* Menu items */
+.menu-item {
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #444; /* Separating lines */
+  text-align: center; /* Center text */
+}
+
+/* Hover effect on menu items */
+.menu-item:hover {
+  background-color: #444; /* Change background on hover */
+}
+
+/* Main content area */
+.main-content {
+  flex: 1; /* Allow the main content to take remaining space */
+  padding: 20px; /* Padding for the content */
+  color: white; /* Default text color */
+}

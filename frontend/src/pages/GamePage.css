@@ -1,0 +1,98 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+}
+
+.matchup {
+    display: flex;
+    justify-content: center; /* Center the memes */
+    gap: 20px; /* Space between memes */
+}
+
+.meme-box {
+    width: 25vw; /* Relative to viewport width */
+    max-width: 500px; /* Maximum width of 500px */
+    max-height: 500px; /* Maximum height of 500px */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align the content to the top */
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Position for hover effect */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.meme-box img,
+.meme-box video {
+    width: 100%;
+    height: 100%; /* Preserve aspect ratio */
+    object-fit: contain; /* Preserve aspect ratio */
+    border-radius: 10px;
+}
+
+.meme-box:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.6); /* White light hover effect */
+}
+
+/* Styling for ELO text */
+.meme-box p {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 5px;
+    margin: 0;
+    border-radius: 0 0 10px 10px; /* Match the rounded corners */
+}
+
+.vote-container {
+    display: flex;
+    justify-content: space-around; /* Space out buttons evenly */
+    margin-top: 20px; /* Add margin above buttons */
+  }
+  
+  .vote-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+    margin: 0 190px; /* Add margin between buttons */
+  }
+  
+  .vote-button, .confirm-button { /* Combined styles for both buttons */
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensure buttons take full width available */
+    margin-bottom: 10px;
+  }
+  
+  .vote-button:hover{
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+
+.elo-up {
+    color: green;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.elo-down {
+    color: red;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
